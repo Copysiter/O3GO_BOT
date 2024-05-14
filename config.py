@@ -1,0 +1,4 @@
+﻿TELEBOT_BOT_TOKEN = '6089589289:AAHt1heQ3IqUmOmLifVoHsBBcRl8t2DzvH8'
+TIMEZONE_DELTA = +4
+SUPER_USER_PSW = 'Pms_123!'
+REG_API_ADDR = 'http://10.52.254.155/api/reg/report/user'
