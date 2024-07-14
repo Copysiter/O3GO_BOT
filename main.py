@@ -112,7 +112,7 @@ def user_keyboard(user):
 
 def export_report(user, ts_from, ts_to):
     chat_id = user.ext_id
-    path = f'/var/www/worktime/export/{ts_from}_{ts_to}_{round(time.time())}.xlsx'
+    path = f'{os.path.dirname(os.path.abspath(__file__))}/export/{ts_from}_{ts_to}_{round(time.time())}.xlsx'
     writer = pd.ExcelWriter(path, engine='xlsxwriter')
     for user in User.select(lambda x: (x.id == user.id or (user.is_superuser and x.is_active))):
         name = [c for c in [user.first_name, user.last_name, user.username, user.ext_id] if c][0]
